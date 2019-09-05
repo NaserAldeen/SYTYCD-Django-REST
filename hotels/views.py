@@ -52,7 +52,7 @@ class ModifyBooking(RetrieveUpdateAPIView):
 class CancelBooking(DestroyAPIView):
 	queryset = Booking.objects.all()
 	lookup_field = 'id'
-	lookup_url_kwarg = 'bookig_id'
+	lookup_url_kwarg = 'booking_id'
 	permission_classes = [IsBookedByUser, IsNotInPast]
 
 
